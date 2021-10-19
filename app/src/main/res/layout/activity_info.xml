@@ -6,67 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".InfoActivity" >
 
+
+
     <TextView
         android:id="@+id/textViewStInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Student Information"
-
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewViewName"
-        android:layout_width="58dp"
-        android:layout_height="29dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Name"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewStInfo" />
+        app:layout_constraintTop_toBottomOf="@id/textViewStInfo"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="60dp"
+        />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="163dp" />
+        android:text=""
+        app:layout_constraintTop_toTopOf="@id/textViewViewName"
+        app:layout_constraintBottom_toBottomOf="@id/textViewViewName"
+        app:layout_constraintLeft_toRightOf="@id/textViewViewName"
+        android:layout_marginLeft="01dp"      />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="261dp" />
+        android:text="Age"
+        app:layout_constraintTop_toBottomOf="@id/textViewViewName"
+        app:layout_constraintStart_toStartOf="@id/textViewViewName"
+        android:layout_marginTop="50dp"       />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTexAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="255dp" />
-
+        android:text=""
+        app:layout_constraintTop_toTopOf="@id/textViewAge"
+        app:layout_constraintBottom_toBottomOf="@id/textViewAge"
+        app:layout_constraintStart_toStartOf="@id/editTextName"
+        />
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="549dp" />
+        android:text="Display"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textViewViewName"
+        android:layout_marginBottom="50dp"
+         />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnReturn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="552dp" />
+        android:text="Return"
+        app:layout_constraintBottom_toBottomOf="@id/btnDisplay"
+        app:layout_constraintStart_toTopOf="@id/btnDisplay"
+        app:layout_constraintEnd_toEndOf="@id/editTextName"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
